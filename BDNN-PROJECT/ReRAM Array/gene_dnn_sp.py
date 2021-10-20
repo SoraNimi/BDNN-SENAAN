@@ -3,9 +3,9 @@ import numpy as np
 # neuron = np.sign(np.load('layer0_neuron0.npy'))
 # neuron = np.random.randint(2,size=1024)
 
-arrayR100 = np.random.normal(100, 2.5, 5000000)
+arrayR100 = np.random.normal(100, 40, 5000000)
 num100 = 0
-arrayR53 = np.random.normal(5.3, 0.1325, 5000000)
+arrayR53 = np.random.normal(5.3, 2.12, 5000000)
 num53 = 0
 
 weight = np.load('weight_retrain15.npy', allow_pickle=True, encoding="latin1")
@@ -35,7 +35,7 @@ print(neuron[0].shape)
 print(neuron[2].shape)
 print(neuron[4].shape)
 print(neuron[6].shape)
-header_file = open("module_header.sp", "r")
+header_file = open("module_header.sp", "r", encoding = 'UTF-8')
 line = header_file.readline()
 while (not line == ""):
     output_file.write(line)
